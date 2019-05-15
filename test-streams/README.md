@@ -1,0 +1,1 @@
+A fork of https://github.com/moul/test-streams/ with a minor modification to fix a bug that prevents STDOUT/STDERR output when STDIN is provided. A count parameter has also been added to allow the user to control how many rounds to run.
