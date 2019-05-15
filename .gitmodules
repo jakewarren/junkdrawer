@@ -1,0 +1,3 @@
+[submodule "verifyemail"]
+	path = verifyemail
+	url = https://github.com/opsvision/email-verification.git
