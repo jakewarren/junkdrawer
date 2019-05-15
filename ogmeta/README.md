@@ -2,13 +2,13 @@
 
 Scrapes and displays OpenGraph & metadata properties for a website.
 
-### Installation
+## Installation
 
 ```
 go get github.com/jakewarren/junkdrawer/ogmeta
 ``` 
 
-### Usage
+## Usage
 
 ```
 ogmeta <url>

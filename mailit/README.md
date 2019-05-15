@@ -2,17 +2,17 @@
 
 quickly send emails from the command line
 
-### Prequisities
+## Prequisities
 
 This program assumes you have a local MTA (such as Postfix) installed and listening on localhost:25 with no authenticaion.
 
-### Installation
+## Installation
 
 ```
 go get github.com/jakewarren/junkdrawer/mailit
 ``` 
 
-### Usage
+## Usage
 
 ```
 Usage of mailit:
@@ -28,7 +28,7 @@ Usage of mailit:
   -t, --to strings       addresses to send to <To>
 ``` 
 
-### Example
+## Example
 
 email the output of a command (read from STDIN):
 ``` 
