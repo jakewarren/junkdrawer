@@ -17,7 +17,7 @@ Usage of unshorten:
     	display verbose trace information
 ```
 ```
-ogmeta <url>
+unshorten <url>
 ```
 
 ## Example
