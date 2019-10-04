@@ -37,8 +37,8 @@ func tailStdin() {
 }
 
 func printMarker() {
-	if ct := os.Getenv("COLORTERM"); ct == "truecolour" || ct == "24bit" {
-		fmt.Println(sinebow.RainbroBG(hr.HorizontalRule("-")))
+	if ct := os.Getenv("COLORTERM"); ct == "truecolor" || ct == "24bit" {
+		fmt.Print(sinebow.RainbroBG(hr.HorizontalRule("-")))
 	} else {
 		hr := hr.HorizontalRule("-")
 		in := strings.NewReader(hr)
