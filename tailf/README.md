@@ -13,6 +13,7 @@ go get github.com/jakewarren/junkdrawer/tailf
 ## Usage
 
 Keyboard Shortcuts:
+
 | Shortcut | Action               |
 |----------|----------------------|
 | Esc      | Quit                 |
