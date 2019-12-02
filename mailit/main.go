@@ -29,6 +29,7 @@ type config struct {
 	dryRun      bool // don't actually send email, just simulate it
 	pre         bool // encapsulate output in <pre> tag
 	inline      bool // run through premailer to inline style info
+	emptyBody   bool // don't send emails with empty body
 }
 
 func (c config) sendEmail(input io.Reader) {
@@ -37,6 +38,18 @@ func (c config) sendEmail(input io.Reader) {
 
 	rawInput, _ := ioutil.ReadAll(input)
 	msgBody := string(rawInput)
+
+	// prevent empty emails from being sent unless they are requested
+	if len(rawInput) == 0 {
+		switch {
+		case len(c.attachments) > 0: // allow empty body email if there are attachments
+			break
+		case c.emptyBody:
+			break
+		default:
+			os.Exit(0)
+		}
+	}
 
 	m := mail.NewMessage()
 	if len(c.from) > 0 {
@@ -102,6 +115,7 @@ func main() {
 	pflag.StringSliceVar(&c.cc, "cc", []string{}, "addresses to send cc <CC>")
 	pflag.StringSliceVar(&c.bcc, "bcc", []string{}, "addresses to send bcc <BCC>")
 	pflag.BoolVarP(&c.dryRun, "dry-run", "n", false, "dry run, don't actually send email")
+	pflag.BoolVarP(&c.emptyBody, "empty-body", "E", false, "allow emails to be sent with empty body")
 	pflag.BoolVar(&c.pre, "pre", true, "wrap body with a <pre> element")
 	pflag.BoolVar(&c.inline, "inline", false, "inline style information via premailer")
 	pflag.Parse()
@@ -118,11 +132,9 @@ func main() {
 	}
 
 	c.sendEmail(os.Stdin)
-
 }
 
 func ensureProvided(c *config) {
-
 	errOut := func(msg string) {
 		fmt.Fprintf(os.Stderr, msg)
 		os.Exit(1)
