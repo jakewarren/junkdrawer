@@ -5,7 +5,7 @@ Scrapes and displays OpenGraph & metadata properties for a website.
 ## Installation
 
 ```
-go get github.com/jakewarren/junkdrawer/ogmeta
+go install github.com/jakewarren/junkdrawer/ogmeta@install
 ``` 
 
 ## Usage

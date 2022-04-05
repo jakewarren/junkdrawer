@@ -5,7 +5,7 @@ Converts an ip range to CIDR format.
 ## Installation
 
 ```
-go get github.com/jakewarren/junkdrawer/iprange2cidr
+go install github.com/jakewarren/junkdrawer/iprange2cidr@latest
 ```
 
 ## Usage

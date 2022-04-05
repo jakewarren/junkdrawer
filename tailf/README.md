@@ -7,7 +7,7 @@ This tool replicates `tail -f` functionality with the addition of two features:
 ## Installation
 
 ```
-go get github.com/jakewarren/junkdrawer/tailf
+go install github.com/jakewarren/junkdrawer/tailf@latest
 ```
 
 ## Usage

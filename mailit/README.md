@@ -9,7 +9,7 @@ This program assumes you have a local MTA (such as Postfix) installed and listen
 ## Installation
 
 ```
-go get github.com/jakewarren/junkdrawer/mailit
+go install github.com/jakewarren/junkdrawer/mailit@latest
 ``` 
 
 ## Usage

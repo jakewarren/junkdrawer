@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-go get github.com/jakewarren/junkdrawer/unshorten
+go install github.com/jakewarren/junkdrawer/unshorten@latest
 ```
 
 ## Usage
