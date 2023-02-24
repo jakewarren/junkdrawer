@@ -12,7 +12,7 @@ github.com/spf13/pflag
 github.com/vanng822/css
 # github.com/vanng822/go-premailer v0.0.0-20190504065308-ac25997d78c7
 github.com/vanng822/go-premailer/premailer
-# golang.org/x/net v0.0.0-20190514140710-3ec191127204
+# golang.org/x/net v0.7.0
 golang.org/x/net/html
 golang.org/x/net/html/atom
 # gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc
